@@ -44,8 +44,8 @@ navbarLinks.forEach((link) => {
       });
     } else if (link.getAttribute("id") === "changeLang") {
       direction === "ltr"
-        ? (window.location.href = "../index-rtl.html")
-        : (window.location.href = "../index.html");
+        ? (window.location.href = "./index-rtl.html")
+        : (window.location.href = "./index.html");
     }
   });
 });
