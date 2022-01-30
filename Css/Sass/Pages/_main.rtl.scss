@@ -1,0 +1,11 @@
+/* Start Services */
+.services {
+  .service-container {
+    @include mediaQuery(small) {
+      .service {
+        text-align: $directionText;
+      }
+    }
+  }
+}
+/* End Services */

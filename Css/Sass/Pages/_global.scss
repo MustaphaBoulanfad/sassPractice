@@ -1,0 +1,23 @@
+* {
+  @include prefixer(box-sizing, border-box, webkit moz);
+}
+html {
+  @include prefixer(scroll-behavior, smooth, webkit moz);
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.fullWidth {
+  width: 100% !important;
+}

@@ -1,0 +1,224 @@
+/* Start Slider */
+.slider {
+  padding: 30px 0;
+  blockquote {
+    font-size: 14px;
+    font-weight: 500;
+    color: $paragraphColor;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.7;
+    @include mediaQuery(meduim) {
+      font-size: 19px;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .slider-container {
+    overflow: hidden;
+    width: 90%;
+    margin: 25px auto;
+    .holder {
+      display: flex;
+      width: (100% * 3);
+      transition: transform $hoverTransition;
+      img {
+        width: 33.33%;
+      }
+    }
+  }
+  .bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      width: 8px;
+      height: 8px;
+      background-color: $secondaryColor;
+      border-radius: 50%;
+      margin: 0 1px;
+      cursor: pointer;
+      @include prefixer(transition, background-color $hoverTransition);
+      &:hover,
+      &.active {
+        background-color: $mainColor;
+      }
+      @include mediaQuery(meduim) {
+        width: 12px;
+        height: 12px;
+        margin: 0 2px;
+      }
+    }
+  }
+}
+/* End Slider */
+
+/* Start Services */
+.services {
+  padding: 40px 0;
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    @include mediaQuery(small) {
+      flex-direction: if($language == "ar", row-reverse, row);
+      align-items: center;
+      .service {
+        width: 30%;
+        text-align: $directionText;
+      }
+    }
+    .service {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      h4 {
+        color: $headingColor;
+        text-transform: uppercase;
+        margin: 15px 0;
+        i {
+          font-size: 25px;
+          margin: 0 5px;
+          position: relative;
+          top: 2px;
+        }
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.4;
+        padding: 0 10px;
+        color: $paragraphColor;
+      }
+      a {
+        color: $mainColor;
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0 10px;
+        i {
+          margin: 0 5px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+/* End Services */
+
+/* Start Players */
+.players {
+  padding: 40px 0;
+  .players-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    .player {
+      width: 90%;
+      margin: 15px auto;
+      text-align: center;
+      img {
+        width: 70%;
+        margin: 0 auto;
+      }
+      p {
+        color: $paragraphColor;
+        font-size: 15px;
+        margin: 0 auto 5px;
+        span {
+          color: $headingColor;
+          font-weight: 600;
+        }
+      }
+      .info p {
+        line-height: 1.4;
+      }
+      a {
+        color: $mainColor;
+        margin-top: 10px;
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: 600;
+        cursor: pointer;
+        i {
+          margin: 0 5px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+    @include mediaQuery(small) {
+      flex-direction: if($language == "ar", row-reverse, row);
+      flex-wrap: wrap;
+      .player {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    @include mediaQuery(meduim) {
+      .player {
+        width: 18%;
+      }
+    }
+  }
+}
+/* End Players */
+
+/* Start more */
+.descover-more {
+  padding: 40px 0;
+  .more-container {
+    display: flex;
+    flex-direction: column;
+    .more {
+      width: 90%;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .descover {
+        @include overlay($mainColor, 0.5, 3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: unset;
+        bottom: -100%;
+        color: #fff;
+        transition: bottom $hoverTransition;
+        cursor: pointer;
+        user-select: none;
+        h3 {
+          font-size: 25px;
+          font-weight: 600;
+          margin: 5px 0;
+        }
+        i {
+          font-size: 35px;
+        }
+      }
+      &:hover .descover {
+        bottom: 0;
+      }
+    }
+    @include mediaQuery(small) {
+      flex-direction: if($language == "ar", row-reverse, row);
+      justify-content: space-between;
+      .more {
+        width: 30%;
+        margin: 0;
+      }
+    }
+  }
+}
+/* End more */

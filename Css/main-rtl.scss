@@ -1,0 +1,14 @@
+@import "./Sass/Helpers/variables";
+@import "./Sass/Helpers/mixins";
+@import "./Sass/Helpers/functions";
+@import "./Sass/Pages/global";
+@import "./Sass/Layouts/grid";
+
+$language: "ar";
+$directionText: right;
+
+@import "./Sass/Layouts/header";
+@import "./Sass/Components/buttons";
+@import "./Sass/Components/headings";
+@import "./Sass/Pages/main.rtl";
+@import "./Sass/Layouts/footer";
